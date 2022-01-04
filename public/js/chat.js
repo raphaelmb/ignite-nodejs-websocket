@@ -1,6 +1,8 @@
 const socket = io("http://localhost:3000");
 let idChatRoom = "";
 
+socket.on("chat_started", (data) => console.log(data));
+
 function onLoad() {
   const urlParams = new URLSearchParams(window.location.search);
   const name = urlParams.get("name");
